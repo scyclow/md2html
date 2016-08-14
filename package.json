@@ -1,0 +1,49 @@
+{
+  "author": "Steve Pikelny",
+  "license": "MIT",
+  "name": "Markdown > HTML",
+  "version": "0.1.0",
+  "description": "Turn md into html",
+  "main": "src/index.js",
+  "scripts": {
+    "flow": "flow",
+    "clean": "rimraf build",
+    "watch": "npm run clean && webpack && webpack --watch",
+    "w": "npm run watch",
+    "start": "npm run watch",
+    "r": "node build/build.js test.md output.html",
+    "test": "karma start",
+    "build:webpack": "NODE_ENV=production webpack --config webpack.config.prod.js",
+    "build": "npm run clean && npm run build:webpack"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.6.1",
+    "babel-runtime": "^6.6.1",
+    "lodash": "^4.10.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.7.0",
+    "babel-eslint": "^5.0.0",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-flow-strip-types": "^6.8.0",
+    "babel-plugin-transform-runtime": "^6.6.0",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "eslint": "^1.5.0",
+    "eslint-loader": "^1.0.0",
+    "eslint-plugin-react": "^3.4.2",
+    "flow-bin": "^0.30.0",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.13.10",
+    "karma-chrome-launcher": "^0.2.1",
+    "karma-jasmine": "^0.3.6",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "karma-sourcemap-loader": "^0.3.6",
+    "karma-webpack": "^1.7.0",
+    "phantomjs": "^1.9.19",
+    "phantomjs-polyfill": "0.0.2",
+    "rimraf": "^2.4.3",
+    "webpack": "^1.12.14"
+  }
+}
